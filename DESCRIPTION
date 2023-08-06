@@ -1,13 +1,17 @@
 Package: ceblR
-Title: What the Package Does (One Line, Title Case)
+Title: Scrape and Analyze Data from the Canadian Elite Basketball League
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("David", "Awosoga", , "odo.awosoga@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-2741-5770"))
+Description: This packages scrapes boxscore and play-by-play data from the CEBL website and creates a repository of basic and advanced statistics for teams and players.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.2
-Imports: 
+Imports:
+    magrittr,
+    stringr
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
