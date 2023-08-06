@@ -26,4 +26,4 @@ jobs:
           HOST: ${{ secrets.HOST }}
           USER: ${{ secrets.USER }}
           PASSWORD: ${{ secrets.PASSWORD }}
-        run: Rscript secrets.R
+        run: Rscript R/secrets.R
