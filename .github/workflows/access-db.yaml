@@ -16,7 +16,7 @@ jobs:
           r-version: '4.1.1' # the R version to install
 
       - name: install r packages # RPostgres
-        run: Rscript -e "install.packages(c('RPostgres','RPostgreSQL'))" 
+        run: Rscript -e "install.packages(c('RPostgreSQL','RPostgres'))" 
 
       - name: execute r script # email-from-r.R
         env: 
