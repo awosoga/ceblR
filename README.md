@@ -1,3 +1,4 @@
+[![access-db](https://github.com/awosoga/ceblR/actions/workflows/access-db.yaml/badge.svg)](https://github.com/awosoga/ceblR/actions/workflows/access-db.yaml)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
