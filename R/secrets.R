@@ -1,7 +1,7 @@
 library('RPostgreSQL')
 library('RPostgres')
 data(mtcars)
-con <- dbConnect(conn = dbDriver("PostgreSQL"),
+con <- dbConnect(drv = dbDriver("PostgreSQL"),
                   dbname = Sys.getenv("DBNAME"),
                   host = Sys.getenv("HOST"),
                   user = Sys.getenv("USER"),
