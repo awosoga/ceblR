@@ -1,10 +1,11 @@
-[![access-db](https://github.com/awosoga/ceblR/actions/workflows/access-db.yaml/badge.svg)](https://github.com/awosoga/ceblR/actions/workflows/access-db.yaml)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # ceblR
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/awosoga/ceblR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/awosoga/ceblR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of ceblR is to help interested parties scrape and analyze data

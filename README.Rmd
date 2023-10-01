@@ -16,9 +16,13 @@ knitr::opts_chunk$set(
 # ceblR
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/awosoga/ceblR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/awosoga/ceblR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of ceblR is to ...
+The goal of ceblR is to help interested parties scrape and analyze data from the 
+Canadian Elite Basketball League. It provides functions to present data in an 
+easy-to-use format provides greater detail an accessibility than what is included
+on the official [CEBL Website](https://cebl.ca)
 
 ## Installation
 
@@ -29,27 +33,9 @@ You can install the development version of ceblR from [GitHub](https://github.co
 devtools::install_github("awosoga/ceblR")
 ```
 
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+## Usage
 
 ```{r example}
 library(ceblR)
 ## basic example code
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
