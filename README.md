@@ -10,13 +10,14 @@
 
 The goal of ceblR is to help interested parties scrape and analyze data
 from the Canadian Elite Basketball League. It provides functions to
-present data in an easy-to-use format provides greater detail an
+present data in an easy-to-use format provides greater detail and
 accessibility than what is included on the official [CEBL
 Website](https://cebl.ca)
 
 ## Installation
 
-You can install the development version of ceblR from
+You can install the development version of
+[**`ceblR`**](https://github.com/awosoga/ceblR) from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -26,7 +27,12 @@ devtools::install_github("awosoga/ceblR")
 
 ## Usage
 
-``` r
-library(ceblR)
-## basic example code
-```
+Please refer to the package vignette for more information on how to use
+this library.
+
+### Acknowledgement
+
+This package is a near carbon copy of [Jason
+Zivkovic’s](https://twitter.com/jaseziv)
+[**`euroleagueR`**](https://github.com/JaseZiv/euroleagueR/) package.
+Thank you for providing an excellent template to follow.

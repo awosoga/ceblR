@@ -13,7 +13,10 @@ Imports:
     dplyr,
     magrittr
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-URL: https://github.com/awosoga/ceblR
+URL: https://github.com/awosoga/ceblR, https://awosoga.github.io/ceblR/
 BugReports: https://github.com/awosoga/ceblR/issues
+VignetteBuilder: knitr

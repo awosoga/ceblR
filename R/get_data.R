@@ -52,3 +52,21 @@ player_advanced_data <- function(year) {
            season, ".rds")) %>% lapply(read_rds) %>% dplyr::bind_rows()
 }
 
+#' Get CEBL team advanced data
+#'
+#' @param year The season(s) of interest.
+#'
+#' @return A dataframe of team advanced data within the requested season(s).
+#' @export
+#'
+#' @examples
+#' try({
+#' team_advanced_data <- team_advanced_data(2020)
+#' team_advanced_data_2019_and_2020 <- team_advanced_data(c(2019:2020))
+#' })
+team_advanced_data <- function(year) {
+  sapply(year, function(season)
+    paste0("https://github.com/awosoga/ceblR_data/releases/download/four_factors/team_four_factors_",
+           season, ".rds")) %>% lapply(read_rds) %>% dplyr::bind_rows()
+}
+

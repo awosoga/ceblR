@@ -1,0 +1,82 @@
+---
+title: "How to use ceblR"
+author: "David Awosoga"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ceblR-how-to-use}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  comment = "#>"
+)
+```
+
+## Overview
+
+This vignette will outline how to use the functions in the `ceblR` package 
+to access data from the Canadian Elite Basketball League (CEBL).
+
+## Installation
+
+You can install the development version of [**```ceblR```**](https://github.com/awosoga/ceblR) from [GitHub](https://github.com/awosoga/ceblR) with:
+
+```{r installation, eval=FALSE}
+# install.packages("remotes")
+remotes::install_github("awosoga/ceblR")
+```
+
+```{r setup}
+library(ceblR)
+library(dplyr)
+```
+
+## Usage
+
+The following code snippets will provide information on how to access different CEBL statistics.
+
+### Team Boxscores
+
+Use `team_boxscore_data()` to access team boxscore outputs.
+
+```{r team_boxscores}
+team_boxscores <- team_boxscore_data(2020)
+glimpse(team_boxscores)
+```
+
+### Player Boxscores
+
+Use `player_boxscore_data()` to access individual player boxscore outputs.
+
+```{r player_boxscores}
+player_boxscores <- player_boxscore_data(2020)
+glimpse(player_boxscores)
+```
+
+### Advanced Player Data
+
+Use `player_advanced_data()` to access individual advanced statistics such as [*Player Efficiency Rating*](https://www.basketball-reference.com/about/per.html) (**PER**),
+[*Box Plus Minus*](https://www.basketball-reference.com/about/bpm2.html) (**BPM**), and [*Value Over Replacement Player*](https://www.basketball-reference.com/about/bpm2.html) (**VORP**). Note that all calculations are unofficial.
+
+```{r advanced_player_data}
+player_advanced_data <- player_advanced_data(2020)
+glimpse(player_advanced_data)
+```
+
+### Advanced Team Data
+
+Use `team_advanced_data()` to access team advanced statistics such as *Pace*, 
+*Offensive* and *Defensive Rating*, and the [*Four Factors*](https://www.basketball-reference.com/about/factors.html). Note that all calculations are unofficial.
+
+```{r advanced_team_data}
+team_advanced_data <- team_advanced_data(2020)
+glimpse(team_advanced_data)
+```
+
+
