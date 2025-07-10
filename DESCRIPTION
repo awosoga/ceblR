@@ -2,17 +2,20 @@ Package: ceblR
 Title: Extract Data from the Canadian Elite Basketball League
 Version: 0.0.0.9000
 Authors@R: 
-    person("David", "Awosoga", , "odo.awosoga@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-2741-5770"))
+    c(person("David", "Awosoga", , "odo.awosoga@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-2741-5770")),
+      person("Matthew", "Chow", , "mc2chow@uwaterloo.ca", role = c("aut"))
+      )
 Description: This packages gathers boxscore and play-by-play data from the CEBL website and creates a repository of basic and advanced statistics for teams and players.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Imports:
     dplyr,
     lifecycle,
-    magrittr
+    magrittr,
+    readr
 Suggests: 
     knitr,
     rmarkdown,

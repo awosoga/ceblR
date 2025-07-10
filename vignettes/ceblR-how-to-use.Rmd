@@ -41,42 +41,77 @@ library(dplyr)
 
 The following code snippets will provide information on how to access different CEBL statistics.
 
+### Schedules
+Use `load_cebl_schedule_data()` to access the CEBL schedule data.
+
+```{r schedules}
+load_cebl_schedules <- load_cebl_schedule(2020)
+glimpse(load_cebl_schedules)
+```
+
 ### Team Boxscores
 
-Use `team_boxscore_data()` to access team boxscore outputs.
+Use `load_cebl_team_boxscores()` to access team boxscore outputs.
 
 ```{r team_boxscores}
-team_boxscores <- team_boxscore_data(2020)
-glimpse(team_boxscores)
+load_cebl_team_boxscores <- load_cebl_team_boxscores(2020)
+glimpse(load_cebl_team_boxscores)
 ```
 
 ### Player Boxscores
 
-Use `player_boxscore_data()` to access individual player boxscore outputs.
+Use `load_cebl_player_boxscores()` to access individual player boxscore outputs.
 
 ```{r player_boxscores}
-player_boxscores <- player_boxscore_data(2020)
-glimpse(player_boxscores)
+load_cebl_player_boxscores <- load_cebl_player_boxscores(2020)
+glimpse(load_cebl_team_boxscores)
 ```
 
-### Advanced Player Data
+### Officials
 
-Use `player_advanced_data()` to access individual advanced statistics such as [*Player Efficiency Rating*](https://www.basketball-reference.com/about/per.html) (**PER**),
-[*Box Plus Minus*](https://www.basketball-reference.com/about/bpm2.html) (**BPM**), and [*Value Over Replacement Player*](https://www.basketball-reference.com/about/bpm2.html) (**VORP**). Note that all calculations are unofficial.
+Use `load_cebl_officials()` to access the officials data.
 
-```{r advanced_player_data}
-player_advanced_data <- player_advanced_data(2020)
-glimpse(player_advanced_data)
+```{r officials}
+load_cebl_officials <- load_cebl_officials(2020)
+glimpse(load_cebl_officials)
 ```
 
-### Advanced Team Data
+### Coaches
 
-Use `team_advanced_data()` to access team advanced statistics such as *Pace*, 
-*Offensive* and *Defensive Rating*, and the [*Four Factors*](https://www.basketball-reference.com/about/factors.html). Note that all calculations are unofficial.
+Use `load_cebl_coaches()` to access the coaches data.
 
-```{r advanced_team_data}
-team_advanced_data <- team_advanced_data(2020)
-glimpse(team_advanced_data)
+```{r coaches}
+load_cebl_coaches <- load_cebl_coaches(2020)
+glimpse(load_cebl_coaches)
 ```
+
+### Play-by-Play
+
+Use `load_cebl_pbp()` to access the play-by-play data.
+
+```{r play_by_play}
+load_cebl_pbp <- load_cebl_pbp(2020)
+glimpse(load_cebl_pbp)
+```
+
+<!-- ### Advanced Player Data -->
+
+<!-- Use `player_advanced_data()` to access individual advanced statistics such as [*Player Efficiency Rating*](https://www.basketball-reference.com/about/per.html) (**PER**), -->
+<!-- [*Box Plus Minus*](https://www.basketball-reference.com/about/bpm2.html) (**BPM**), and [*Value Over Replacement Player*](https://www.basketball-reference.com/about/bpm2.html) (**VORP**). Note that all calculations are unofficial. -->
+
+<!-- ```{r advanced_player_data} -->
+<!-- player_advanced_data <- player_advanced_data(2020) -->
+<!-- glimpse(player_advanced_data) -->
+<!-- ``` -->
+
+<!-- ### Advanced Team Data -->
+
+<!-- Use `team_advanced_data()` to access team advanced statistics such as *Pace*,  -->
+<!-- *Offensive* and *Defensive Rating*, and the [*Four Factors*](https://www.basketball-reference.com/about/factors.html). Note that all calculations are unofficial. -->
+
+<!-- ```{r advanced_team_data} -->
+<!-- team_advanced_data <- team_advanced_data(2020) -->
+<!-- glimpse(team_advanced_data) -->
+<!-- ``` -->
 
 
