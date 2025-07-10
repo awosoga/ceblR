@@ -238,7 +238,7 @@ load_cebl_team_boxscores <- function(seasons = NULL) {
 #' |captain                               |   lgl    |
 #' |photo_t                               |   chr    |
 #' |photo_s                               |   chr    |
-#' ======================================  ===========
+#' ======================================   ===========
 
 load_cebl_player_boxscores <- function(seasons = NULL) {
   if (is.null(seasons)) {
@@ -251,7 +251,8 @@ load_cebl_player_boxscores <- function(seasons = NULL) {
   }
 
   player_boxscore = readr::read_csv(
-    "https://github.com/ryanndu/cebl-data/releases/download/player-boxscore/cebl_players.csv"
+    "https://github.com/ryanndu/cebl-data/releases/download/player-boxscore/cebl_players.csv",
+    col_types = cols(minutes = readr::col_character())
   )
   team_boxscore <- dplyr::filter(player_boxscore, season %in% seasons)
 
