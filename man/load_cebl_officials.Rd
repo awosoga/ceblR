@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_data.R
 \name{load_cebl_officials}
 \alias{load_cebl_officials}
-\title{load_cebl_officials}
+\title{\strong{Load CEBL Officials}}
 \usage{
 load_cebl_officials(seasons = NULL)
 }
@@ -10,30 +10,28 @@ load_cebl_officials(seasons = NULL)
 \item{seasons}{A vector of seasons (years) to filter the data.}
 }
 \value{
-A data frame containing the CEBL officials for the specified seasons.
+A data frame containing the CEBL officials for the specified seasons.\tabular{ll}{
+   Column Name \tab Type \cr
+   game_id \tab dbl \cr
+   season \tab dbl \cr
+   officials_type \tab chr \cr
+   officials_name \tab chr \cr
+   first_name \tab chr \cr
+   last_name \tab chr \cr
+   scoreboard_name \tab chr \cr
+   first_name_initial \tab chr \cr
+   last_name_initial \tab chr \cr
+   international_first_name \tab chr \cr
+   international_first_name_initial \tab chr \cr
+   international_last_name \tab chr \cr
+   international_last_name_initial \tab chr \cr
+   scoreboard_name \tab chr \cr
+}
 }
 \description{
 A function to load the Canadian Elite Basketball League (CEBL) officials.
 }
 \examples{
 load_cebl_officials(2020:2021)
-================================    ===========
-|Column Name                      |   Type    |
-================================    ===========
-|game_id                          |   dbl     |
-|season                           |   dbl     |
-|officials_type                   |   chr     |
-|officials_name                   |   chr     |
-|first_name                       |   chr     |
-|last_name                        |   chr     |
-|scoreboard_name                  |   chr     |
-|first_name_initial               |   chr     |
-|last_name_initial                |   chr     |
-|international_first_name         |   chr     |
-|international_first_name_initial |   chr     |
-|international_last_name          |   chr     |
-|international_last_name_initial  |   chr     |
-|scoreboard_name                  |   chr     |
-|================================   ===========
 
 }

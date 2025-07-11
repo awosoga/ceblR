@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_data.R
 \name{load_cebl_coaches}
 \alias{load_cebl_coaches}
-\title{load_cebl_coaches}
+\title{\strong{Load CEBL Coaches}}
 \usage{
 load_cebl_coaches(seasons = NULL)
 }
@@ -10,7 +10,23 @@ load_cebl_coaches(seasons = NULL)
 \item{seasons}{A vector of seasons (years) to filter the data.}
 }
 \value{
-A data frame containing the CEBL coaches for the specified seasons.
+A data frame containing the CEBL coaches for the specified seasons.\tabular{ll}{
+   Column Name \tab Type \cr
+   game_id \tab dbl \cr
+   season \tab dbl \cr
+   team_name \tab chr \cr
+   coach_name \tab chr \cr
+   coach_type \tab chr \cr
+   first_name \tab chr \cr
+   first_name_initial \tab chr \cr
+   last_name \tab chr \cr
+   last_name_initial \tab chr \cr
+   international_first_name \tab chr \cr
+   international_first_name_initial \tab chr \cr
+   international_last_name \tab chr \cr
+   international_last_name_initial \tab chr \cr
+   scoreboard_name \tab chr \cr
+}
 }
 \description{
 A function to load the Canadian Elite Basketball League (CEBL) coaches.
@@ -18,5 +34,4 @@ A function to load the Canadian Elite Basketball League (CEBL) coaches.
 \examples{
 load_cebl_coaches(2020:2021)
 
-================================   ===========
 }

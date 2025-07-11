@@ -20,7 +20,12 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: David Awosoga \email{odo.awosoga@gmail.com} (\href{https://orcid.org/0000-0002-2741-5770}{ORCID})
+\strong{Maintainer}: David Awosoga \email{odo.awosoga@gmail.com} (\href{https://orcid.org/0000-0002-2741-5770}{ORCID}) [copyright holder]
+
+Authors:
+\itemize{
+  \item Matthew Chow \email{mc2chow@uwaterloo.ca}
+}
 
 }
 \keyword{internal}

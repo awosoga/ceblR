@@ -1,18 +1,15 @@
-#' load_cebl_schedule
-#'
+utils::globalVariables(c(".data"))
+#' **Load CEBL Game Schedule**
+#' @name load_cebl_schedule
 #' @description A function to load the Canadian Elite Basketball League (CEBL) schedule.
 #'
 #' @param seasons A vector of seasons (years) to filter the data.
 #'                if NULL, defaults to the range from 2019 to the current year.
 #'
-#' @returns A data frame containing the CEBL schedule for the specified seasons.
-#' @export
+#' @return A data frame containing the CEBL schedule for the specified seasons.
 #'
-#' @examples load_cebl_schedule(2020:2021)
-#'
-#' ==============================================
 #' |          Column Name           |   Type    |
-#' ==============================================
+#' |:-------------------------------|:----------|
 #' |fiba_id                         |   dbl     |
 #' |season                          |   dbl     |
 #' |start_time_utc                  |   dttm    |
@@ -40,8 +37,10 @@
 #' |tickets_url_fr                  |   chr     |
 #' |id                              |   dbl     |
 #' |fiba_json_url                   |   chr     |
-#' ================================  ===========|
 #'
+#' @export
+#'
+#' @examples load_cebl_schedule(2020:2021)
 load_cebl_schedule <- function(seasons = NULL) {
   seasons <-
     if (is.null(seasons)) {
@@ -54,26 +53,23 @@ load_cebl_schedule <- function(seasons = NULL) {
     }
 
   schedule <- readr::read_csv("https://github.com/ryanndu/cebl-data/releases/download/schedule/cebl_schedule.csv")
-  schedule <- dplyr::filter(schedule, season %in% seasons)
+  schedule <- dplyr::filter(schedule, .data$season %in% seasons)
 
   return(schedule)
 }
 
-#' load_cebl_team_boxscores
+#' **Load CEBL Team Boxscores**
+#'
+#' @name load_cebl_team_boxscores
 #'
 #' @description A function to load the Canadian Elite Basketball League (CEBL) team boxscores.
 #'
 #' @param seasons A vector of seasons (years) to filter the data.
 #'
-#' @returns A data frame containing the CEBL team boxscores for the specified seasons.
-#' @export
+#' @return A data frame containing the CEBL team boxscores for the specified seasons.
 #'
-#' @examples load_cebl_team_boxscores(2020:2021)
-#'
-#'
-#' ===========================================================
 #' |Column Name                                   |   Type   |
-#' ===========================================================
+#' |:---------------------------------------------|:---------|
 #' |game_id                                       |   dbl    |
 #' |season                                        |   dbl    |
 #' |team_name                                     |   chr    |
@@ -149,11 +145,14 @@ load_cebl_schedule <- function(seasons = NULL) {
 #' |logo_s_height                                 |   dbl    |
 #' |logo_s_width                                  |   dbl    |
 #' |logo_s_bytes                                  |   dbl    |
-#' ==============================================   ===========
+#' @export
 #'
+#' @examples load_cebl_team_boxscores(2020:2021)
+#'
+
 load_cebl_team_boxscores <- function(seasons = NULL) {
   if (is.null(seasons)) {
-    current_year <- as.ineger(format(Sys.Date(), "%Y"))
+    current_year <- as.integer(format(Sys.Date(), "%Y"))
     2019:current_year
   } else if (validate_seasons(seasons)) {
     seasons
@@ -164,25 +163,23 @@ load_cebl_team_boxscores <- function(seasons = NULL) {
   team_boxscore = readr::read_csv(
     "https://github.com/ryanndu/cebl-data/releases/download/team-boxscore/cebl_teams.csv"
   )
-  team_boxscore <- dplyr::filter(team_boxscore, season %in% seasons)
+  team_boxscore <- dplyr::filter(team_boxscore, .data$season %in% seasons)
 
   return(team_boxscore)
 }
 
-#' load_cebl_player_boxscores
+#' **Load CEBL Player Boxscores**
+#'
+#' @name load_cebl_player_boxscores
 #'
 #' @description A function to load the Canadian Elite Basketball League (CEBL) player boxscores.
 #'
 #' @param seasons A vector of seasons (years) to filter the data.
 #'
-#' @returns A data frame containing the CEBL player boxscores for the specified seasons.
-#' @export
+#' @return A data frame containing the CEBL player boxscores for the specified seasons.
 #'
-#' @examples load_cebl_player_boxscores(2020:2021)
-#'
-#' ======================================   ===========
-#' | Column Name                          |    Type   |
-#' ======================================   ===========
+#' | Column Name                          |   Type   |
+#' |:-------------------------------------|:---------|
 #' |game_id                               |   dbl    |
 #' |season                                |   dbl    |
 #' |team_name                             |   chr    |
@@ -238,11 +235,14 @@ load_cebl_team_boxscores <- function(seasons = NULL) {
 #' |captain                               |   lgl    |
 #' |photo_t                               |   chr    |
 #' |photo_s                               |   chr    |
-#' ======================================   ===========
+#' @export
+#'
+#' @examples load_cebl_player_boxscores(2020:2021)
+
 
 load_cebl_player_boxscores <- function(seasons = NULL) {
   if (is.null(seasons)) {
-    current_year <- as.ineger(format(Sys.Date(), "%Y"))
+    current_year <- as.integer(format(Sys.Date(), "%Y"))
     2019:current_year
   } else if (validate_seasons(seasons)) {
     seasons
@@ -252,26 +252,25 @@ load_cebl_player_boxscores <- function(seasons = NULL) {
 
   player_boxscore = readr::read_csv(
     "https://github.com/ryanndu/cebl-data/releases/download/player-boxscore/cebl_players.csv",
-    col_types = cols(minutes = readr::col_character())
+    col_types = readr::cols(minutes = readr::col_character())
   )
-  team_boxscore <- dplyr::filter(player_boxscore, season %in% seasons)
+  team_boxscore <- dplyr::filter(player_boxscore, .data$season %in% seasons)
 
   return(player_boxscore)
 }
 
-#' load_cebl_officials
+#' **Load CEBL Officials**
+#'
+#' @name load_cebl_officials
 #'
 #' @description A function to load the Canadian Elite Basketball League (CEBL) officials.
 #'
 #' @param seasons A vector of seasons (years) to filter the data.
 #'
-#' @returns A data frame containing the CEBL officials for the specified seasons.
-#' @export
+#' @return A data frame containing the CEBL officials for the specified seasons.
 #'
-#' @examples load_cebl_officials(2020:2021)
-#' ================================    ===========
 #' |Column Name                      |   Type    |
-#' ================================    ===========
+#' |:-------------------------------|:-----------|
 #' |game_id                          |   dbl     |
 #' |season                           |   dbl     |
 #' |officials_type                   |   chr     |
@@ -286,11 +285,13 @@ load_cebl_player_boxscores <- function(seasons = NULL) {
 #' |international_last_name          |   chr     |
 #' |international_last_name_initial  |   chr     |
 #' |scoreboard_name                  |   chr     |
-#' |================================   ===========
+#' @export
+#'
+#' @examples load_cebl_officials(2020:2021)
 #'
 load_cebl_officials <- function(seasons = NULL) {
   if (is.null(seasons)) {
-    current_year <- as.ineger(format(Sys.Date(), "%Y"))
+    current_year <- as.integer(format(Sys.Date(), "%Y"))
     2019:current_year
   } else if (validate_seasons(seasons)) {
     seasons
@@ -301,43 +302,44 @@ load_cebl_officials <- function(seasons = NULL) {
   officials = readr::read_csv(
     "https://github.com/ryanndu/cebl-data/releases/download/officials/cebl_officials.csv"
   )
-  officials <- dplyr::filter(officials, season %in% seasons)
+  officials <- dplyr::filter(officials, .data$season %in% seasons)
 
   return(officials)
 }
 
-#' load_cebl_coaches
+#' **Load CEBL Coaches**
+#'
+#' @name load_cebl_coaches
 #'
 #' @description A function to load the Canadian Elite Basketball League (CEBL) coaches.
 #'
 #' @param seasons A vector of seasons (years) to filter the data.
 #'
-#' @returns A data frame containing the CEBL coaches for the specified seasons.
+#' @return A data frame containing the CEBL coaches for the specified seasons.
+#'
+#' |Column Name                     |   Type    |
+#' |:-------------------------------|:----------|
+#' |game_id                         |   dbl     |
+#' |season                          |   dbl     |
+#' |team_name                       |   chr     |
+#' |coach_name                      |   chr     |
+#' |coach_type                      |   chr     |
+#' |first_name                      |   chr     |
+#' |first_name_initial              |   chr     |
+#' |last_name                       |   chr     |
+#' |last_name_initial               |   chr     |
+#' |international_first_name        |   chr     |
+#' |international_first_name_initial|   chr     |
+#' |international_last_name         |   chr     |
+#' |international_last_name_initial |   chr     |
+#' |scoreboard_name                 |   chr     |
 #' @export
 #'
 #' @examples load_cebl_coaches(2020:2021)
 #'
-#'================================   ===========
-# |Column Name                     |   Type    |
-# ================================   ===========
-# |game_id                         |   dbl     |
-# |season                          |   dbl     |
-# |team_name                       |   chr     |
-# |coach_name                      |   chr     |
-# |coach_type                      |   chr     |
-# |first_name                      |   chr     |
-# |first_name_initial              |   chr     |
-# |last_name                       |   chr     |
-# |last_name_initial               |   chr     |
-# |international_first_name        |   chr     |
-# |international_first_name_initial|   chr     |
-# |international_last_name         |   chr     |
-# |international_last_name_initial |   chr     |
-# |scoreboard_name                 |   chr     |
-# ================================  ============
 load_cebl_coaches <- function(seasons = NULL) {
   if (is.null(seasons)) {
-    current_year <- as.ineger(format(Sys.Date(), "%Y"))
+    current_year <- as.integer(format(Sys.Date(), "%Y"))
     2019:current_year
   } else if (validate_seasons(seasons)) {
     seasons
@@ -348,25 +350,23 @@ load_cebl_coaches <- function(seasons = NULL) {
   coaches = readr::read_csv(
     "https://github.com/ryanndu/cebl-data/releases/download/coaches/cebl_coaches.csv"
   )
-  coaches <- dplyr::filter(coaches, season %in% seasons)
+  coaches <- dplyr::filter(coaches, .data$season %in% seasons)
 
   return(coaches)
 }
 
-#' load_cebl_pbp
+#' **Load CEBL Play-by-Play Data**
+#'
+#' @name load_cebl_pbp
 #'
 #' @description A function to load the Canadian Elite Basketball League (CEBL) play-by-play data.
 #'
 #' @param seasons A vector of seasons (years) to filter the data.
 #'
-#' @returns A data frame containing the CEBL play-by-play data for the specified seasons.
-#' @export
+#' @return A data frame containing the CEBL play-by-play data for the specified seasons.
 #'
-#' @examples load_cebl_pbp(2020:2021)
-#'
-#' ================================   ===========
 #' |Column Name                     |   Type   |
-#' ================================   ===========
+#' |:-------------------------------|:---------|
 #' |game_id                         |   dbl    |
 #' |season                          |   dbl    |
 #' |game_time                       |   chr    |
@@ -398,10 +398,12 @@ load_cebl_coaches <- function(seasons = NULL) {
 #' |international_last_name         |   chr    |
 #' |international_first_name_initial|   chr    |
 #' |international_last_name_initial |   chr    |
-#' ================================   ===========
+#' @export
+#'
+#' @examples load_cebl_pbp(2020)
 load_cebl_pbp <- function(seasons = NULL) {
   if (is.null(seasons)) {
-    current_year <- as.ineger(format(Sys.Date(), "%Y"))
+    current_year <- as.integer(format(Sys.Date(), "%Y"))
     2019:current_year
   } else if (validate_seasons(seasons)) {
     seasons
@@ -410,8 +412,9 @@ load_cebl_pbp <- function(seasons = NULL) {
   }
 
   pbp <- sapply(seasons, function(season)
-    paste0("https://github.com/ryanndu/cebl-data/releases/download/pbp/cebl_pbp_", seasons, ".csv")) |>
-    lapply(readr::read_csv) |> dplyr::bind_rows()
+    paste0("https://github.com/ryanndu/cebl-data/releases/download/pbp/cebl_pbp_", season, ".csv")) |>
+    lapply(\(x)readr::read_csv(x, col_types = list(qualifier_3 = readr::col_character()))) |>
+             dplyr::bind_rows()
 
   return(pbp)
 }

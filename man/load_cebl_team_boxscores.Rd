@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_data.R
 \name{load_cebl_team_boxscores}
 \alias{load_cebl_team_boxscores}
-\title{load_cebl_team_boxscores}
+\title{\strong{Load CEBL Team Boxscores}}
 \usage{
 load_cebl_team_boxscores(seasons = NULL)
 }
@@ -10,93 +10,89 @@ load_cebl_team_boxscores(seasons = NULL)
 \item{seasons}{A vector of seasons (years) to filter the data.}
 }
 \value{
-A data frame containing the CEBL team boxscores for the specified seasons.
+A data frame containing the CEBL team boxscores for the specified seasons.\tabular{ll}{
+   Column Name \tab Type \cr
+   game_id \tab dbl \cr
+   season \tab dbl \cr
+   team_name \tab chr \cr
+   short_name \tab chr \cr
+   code \tab chr \cr
+   team_score \tab dbl \cr
+   minutes \tab chr \cr
+   field_goals_made \tab dbl \cr
+   field_goals_attempted \tab dbl \cr
+   field_goal_percentage \tab dbl \cr
+   two_point_field_goals_made \tab dbl \cr
+   two_point_field_goals_attempted \tab dbl \cr
+   two_point__percentage \tab dbl \cr
+   three_point_field_goals_made \tab dbl \cr
+   three_point_field_goals_attempted \tab dbl \cr
+   three_point_percentage \tab dbl \cr
+   free_throws_made \tab dbl \cr
+   free_throws_attempted \tab dbl \cr
+   free_throw_percentage \tab dbl \cr
+   offensive_rebounds \tab dbl \cr
+   defensive_rebounds \tab dbl \cr
+   rebounds \tab dbl \cr
+   assists \tab dbl \cr
+   steals \tab dbl \cr
+   turnovers \tab dbl \cr
+   blocks \tab dbl \cr
+   blocks_received \tab dbl \cr
+   personal_fouls \tab dbl \cr
+   fouls_drawn \tab dbl \cr
+   total_fouls \tab dbl \cr
+   bonus_fouls \tab dbl \cr
+   points_in_the_paint \tab dbl \cr
+   second_chance_points \tab dbl \cr
+   points_from_turnovers \tab dbl \cr
+   bench_points \tab dbl \cr
+   fast_break_points \tab dbl \cr
+   team_index_rating \tab dbl \cr
+   team_index_rating_2 \tab dbl \cr
+   team_index_rating_3 \tab dbl \cr
+   team_index_rating_4 \tab dbl \cr
+   team_index_rating_5 \tab dbl \cr
+   team_index_rating_6 \tab dbl \cr
+   team_index_rating_7 \tab dbl \cr
+   team_fouls \tab dbl \cr
+   team_turnovers \tab dbl \cr
+   team_rebounds \tab dbl \cr
+   team_defensive_rebounds \tab dbl \cr
+   team_offensive_rebounds \tab dbl \cr
+   period_1_score \tab dbl \cr
+   period_2_score \tab dbl \cr
+   period_3_score \tab dbl \cr
+   period_4_score \tab dbl \cr
+   biggest_lead \tab dbl \cr
+   biggest_scoring_run \tab dbl \cr
+   time_leading \tab dbl \cr
+   lead_changes \tab dbl \cr
+   times_scores_level \tab dbl \cr
+   timeouts_left \tab dbl \cr
+   head_coach \tab chr \cr
+   assistant_coach_1 \tab chr \cr
+   assistant_coach_2 \tab chr \cr
+   international_team_name \tab chr \cr
+   international_short_name \tab chr \cr
+   international_code \tab chr \cr
+   logo \tab chr \cr
+   logo_t_url \tab chr \cr
+   logo_t_size \tab chr \cr
+   logo_t_height \tab dbl \cr
+   logo_t_width \tab dbl \cr
+   logo_t_bytes \tab dbl \cr
+   logo_s_url \tab chr \cr
+   logo_s_size \tab chr \cr
+   logo_s_height \tab dbl \cr
+   logo_s_width \tab dbl \cr
+   logo_s_bytes \tab dbl \cr
+}
 }
 \description{
 A function to load the Canadian Elite Basketball League (CEBL) team boxscores.
 }
 \examples{
 load_cebl_team_boxscores(2020:2021)
-
-
-===========================================================
-|Column Name                                   |   Type   |
-===========================================================
-|game_id                                       |   dbl    |
-|season                                        |   dbl    |
-|team_name                                     |   chr    |
-|short_name                                    |   chr    |
-|code                                          |   chr    |
-|team_score                                    |   dbl    |
-|minutes                                       |   chr    |
-|field_goals_made                              |   dbl    |
-|field_goals_attempted                         |   dbl    |
-|field_goal_percentage                         |   dbl    |
-|two_point_field_goals_made                    |   dbl    |
-|two_point_field_goals_attempted               |   dbl    |
-|two_point__percentage                         |   dbl    |
-|three_point_field_goals_made                  |   dbl    |
-|three_point_field_goals_attempted             |   dbl    |
-|three_point_percentage                        |   dbl    |
-|free_throws_made                              |   dbl    |
-|free_throws_attempted                         |   dbl    |
-|free_throw_percentage                         |   dbl    |
-|offensive_rebounds                            |   dbl    |
-|defensive_rebounds                            |   dbl    |
-|rebounds                                      |   dbl    |
-|assists                                       |   dbl    |
-|steals                                        |   dbl    |
-|turnovers                                     |   dbl    |
-|blocks                                        |   dbl    |
-|blocks_received                               |   dbl    |
-|personal_fouls                                |   dbl    |
-|fouls_drawn                                   |   dbl    |
-|total_fouls                                   |   dbl    |
-|bonus_fouls                                   |   dbl    |
-|points_in_the_paint                           |   dbl    |
-|second_chance_points                          |   dbl    |
-|points_from_turnovers                         |   dbl    |
-|bench_points                                  |   dbl    |
-|fast_break_points                             |   dbl    |
-|team_index_rating                             |   dbl    |
-|team_index_rating_2                           |   dbl    |
-|team_index_rating_3                           |   dbl    |
-|team_index_rating_4                           |   dbl    |
-|team_index_rating_5                           |   dbl    |
-|team_index_rating_6                           |   dbl    |
-|team_index_rating_7                           |   dbl    |
-|team_fouls                                    |   dbl    |
-|team_turnovers                                |   dbl    |
-|team_rebounds                                 |   dbl    |
-|team_defensive_rebounds                       |   dbl    |
-|team_offensive_rebounds                       |   dbl    |
-|period_1_score                                |   dbl    |
-|period_2_score                                |   dbl    |
-|period_3_score                                |   dbl    |
-|period_4_score                                |   dbl    |
-|biggest_lead                                  |   dbl    |
-|biggest_scoring_run                           |   dbl    |
-|time_leading                                  |   dbl    |
-|lead_changes                                  |   dbl    |
-|times_scores_level                            |   dbl    |
-|timeouts_left                                 |   dbl    |
-|head_coach                                    |   chr    |
-|assistant_coach_1                             |   chr    |
-|assistant_coach_2                             |   chr    |
-|international_team_name                       |   chr    |
-|international_short_name                      |   chr    |
-|international_code                            |   chr    |
-|logo                                          |   chr    |
-|logo_t_url                                    |   chr    |
-|logo_t_size                                   |   chr    |
-|logo_t_height                                 |   dbl    |
-|logo_t_width                                  |   dbl    |
-|logo_t_bytes                                  |   dbl    |
-|logo_s_url                                    |   chr    |
-|logo_s_size                                   |   chr    |
-|logo_s_height                                 |   dbl    |
-|logo_s_width                                  |   dbl    |
-|logo_s_bytes                                  |   dbl    |
-==============================================   ===========
 
 }

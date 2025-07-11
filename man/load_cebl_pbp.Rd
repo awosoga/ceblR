@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_data.R
 \name{load_cebl_pbp}
 \alias{load_cebl_pbp}
-\title{load_cebl_pbp}
+\title{\strong{Load CEBL Play-by-Play Data}}
 \usage{
 load_cebl_pbp(seasons = NULL)
 }
@@ -10,47 +10,45 @@ load_cebl_pbp(seasons = NULL)
 \item{seasons}{A vector of seasons (years) to filter the data.}
 }
 \value{
-A data frame containing the CEBL play-by-play data for the specified seasons.
+A data frame containing the CEBL play-by-play data for the specified seasons.\tabular{ll}{
+   Column Name \tab Type \cr
+   game_id \tab dbl \cr
+   season \tab dbl \cr
+   game_time \tab chr \cr
+   home_score \tab dbl \cr
+   away_score \tab dbl \cr
+   home_lead \tab dbl \cr
+   team_id \tab dbl \cr
+   period \tab dbl \cr
+   period_type \tab chr \cr
+   player_id \tab dbl \cr
+   scoreboard_name \tab chr \cr
+   success \tab dbl \cr
+   action_type \tab chr \cr
+   action_number \tab dbl \cr
+   previous_action \tab dbl \cr
+   sub_type \tab chr \cr
+   scoring \tab dbl \cr
+   shirt_number \tab dbl \cr
+   player_name \tab chr \cr
+   first_name \tab chr \cr
+   last_name \tab chr \cr
+   x \tab dbl \cr
+   y \tab dbl \cr
+   qualifier_0 \tab chr \cr
+   qualifier_1 \tab chr \cr
+   qualifier_2 \tab chr \cr
+   qualifier_3 \tab chr \cr
+   international_first_name \tab chr \cr
+   international_last_name \tab chr \cr
+   international_first_name_initial \tab chr \cr
+   international_last_name_initial \tab chr \cr
+}
 }
 \description{
 A function to load the Canadian Elite Basketball League (CEBL) play-by-play data.
 }
 \examples{
-load_cebl_pbp(2020:2021)
+load_cebl_pbp(2020)
 
-================================   ===========
-|Column Name                     |   Type   |
-================================   ===========
-|game_id                         |   dbl    |
-|season                          |   dbl    |
-|game_time                       |   chr    |
-|home_score                      |   dbl    |
-|away_score                      |   dbl    |
-|home_lead                       |   dbl    |
-|team_id                         |   dbl    |
-|period                          |   dbl    |
-|period_type                     |   chr    |
-|player_id                       |   dbl    |
-|scoreboard_name                 |   chr    |
-|success                         |   dbl    |
-|action_type                     |   chr    |
-|action_number                   |   dbl    |
-|previous_action                 |   dbl    |
-|sub_type                        |   chr    |
-|scoring                         |   dbl    |
-|shirt_number                    |   dbl    |
-|player_name                     |   chr    |
-|first_name                      |   chr    |
-|last_name                       |   chr    |
-|x                               |   dbl    |
-|y                               |   dbl    |
-|qualifier_0                     |   chr    |
-|qualifier_1                     |   chr    |
-|qualifier_2                     |   chr    |
-|qualifier_3                     |   chr    |
-|international_first_name        |   chr    |
-|international_last_name         |   chr    |
-|international_first_name_initial|   chr    |
-|international_last_name_initial |   chr    |
-================================   ===========
 }

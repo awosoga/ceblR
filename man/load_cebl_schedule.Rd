@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_data.R
 \name{load_cebl_schedule}
 \alias{load_cebl_schedule}
-\title{load_cebl_schedule}
+\title{\strong{Load CEBL Game Schedule}}
 \usage{
 load_cebl_schedule(seasons = NULL)
 }
@@ -11,44 +11,40 @@ load_cebl_schedule(seasons = NULL)
 if NULL, defaults to the range from 2019 to the current year.}
 }
 \value{
-A data frame containing the CEBL schedule for the specified seasons.
+A data frame containing the CEBL schedule for the specified seasons.\tabular{ll}{
+   Column Name \tab Type \cr
+   fiba_id \tab dbl \cr
+   season \tab dbl \cr
+   start_time_utc \tab dttm \cr
+   status \tab chr \cr
+   competition \tab chr \cr
+   venue_name \tab chr \cr
+   period \tab dbl \cr
+   home_team_id \tab dbl \cr
+   home_team_name \tab chr \cr
+   home_team_score \tab dbl \cr
+   home_team_logo_url \tab chr \cr
+   home_team_url_stats_en \tab chr \cr
+   home_team_url_stats_fr \tab chr \cr
+   away_team_id \tab dbl \cr
+   away_team_name \tab chr \cr
+   away_team_score \tab dbl \cr
+   away_team_logo_url \tab chr \cr
+   away_team_url_stats_en \tab chr \cr
+   away_team_url_stats_fr \tab chr \cr
+   stats_url_en \tab chr \cr
+   stats_url_fr \tab chr \cr
+   cebl_stats_url_en \tab chr \cr
+   cebl_stats_url_fr \tab chr \cr
+   tickets_url_en \tab chr \cr
+   tickets_url_fr \tab chr \cr
+   id \tab dbl \cr
+   fiba_json_url \tab chr \cr
+}
 }
 \description{
 A function to load the Canadian Elite Basketball League (CEBL) schedule.
 }
 \examples{
 load_cebl_schedule(2020:2021)
-
-==============================================
-|          Column Name           |   Type    |
-==============================================
-|fiba_id                         |   dbl     |
-|season                          |   dbl     |
-|start_time_utc                  |   dttm    |
-|status                          |   chr     |
-|competition                     |   chr     |
-|venue_name                      |   chr     |
-|period                          |   dbl     |
-|home_team_id                    |   dbl     |
-|home_team_name                  |   chr     |
-|home_team_score                 |   dbl     |
-|home_team_logo_url              |   chr     |
-|home_team_url_stats_en          |   chr     |
-|home_team_url_stats_fr          |   chr     |
-|away_team_id                    |   dbl     |
-|away_team_name                  |   chr     |
-|away_team_score                 |   dbl     |
-|away_team_logo_url              |   chr     |
-|away_team_url_stats_en          |   chr     |
-|away_team_url_stats_fr          |   chr     |
-|stats_url_en                    |   chr     |
-|stats_url_fr                    |   chr     |
-|cebl_stats_url_en               |   chr     |
-|cebl_stats_url_fr               |   chr     |
-|tickets_url_en                  |   chr     |
-|tickets_url_fr                  |   chr     |
-|id                              |   dbl     |
-|fiba_json_url                   |   chr     |
-================================  ===========|
-
 }

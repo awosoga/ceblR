@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_data.R
 \name{load_cebl_player_boxscores}
 \alias{load_cebl_player_boxscores}
-\title{load_cebl_player_boxscores}
+\title{\strong{Load CEBL Player Boxscores}}
 \usage{
 load_cebl_player_boxscores(seasons = NULL)
 }
@@ -10,71 +10,68 @@ load_cebl_player_boxscores(seasons = NULL)
 \item{seasons}{A vector of seasons (years) to filter the data.}
 }
 \value{
-A data frame containing the CEBL player boxscores for the specified seasons.
+A data frame containing the CEBL player boxscores for the specified seasons.\tabular{ll}{
+   Column Name \tab Type \cr
+   game_id \tab dbl \cr
+   season \tab dbl \cr
+   team_name \tab chr \cr
+   player_number \tab dbl \cr
+   player_name \tab chr \cr
+   player_position \tab chr \cr
+   minutes \tab chr \cr
+   podbls \tab dbl \cr
+   field_goals_made \tab dbl \cr
+   field_goals_attempted \tab dbl \cr
+   field_goal_percentage \tab dbl \cr
+   two_podbl_field_goals_made \tab dbl \cr
+   two_podbl_field_goals_attempted \tab dbl \cr
+   two_podbl__percentage \tab dbl \cr
+   three_podbl_field_goals_made \tab dbl \cr
+   three_podbl_field_goals_attempted \tab dbl \cr
+   three_podbl_percentage \tab dbl \cr
+   free_throws_made \tab dbl \cr
+   free_throws_attempted \tab dbl \cr
+   free_throw_percentage \tab dbl \cr
+   offensive_rebounds \tab dbl \cr
+   defensive_rebounds \tab dbl \cr
+   rebounds \tab dbl \cr
+   assists \tab dbl \cr
+   turnovers \tab dbl \cr
+   steals \tab dbl \cr
+   blocks \tab dbl \cr
+   blocks_received \tab dbl \cr
+   personal_fouls \tab dbl \cr
+   fouls_drawn \tab dbl \cr
+   plus_minus \tab dbl \cr
+   index_rating \tab dbl \cr
+   index_rating_2 \tab dbl \cr
+   index_rating_3 \tab dbl \cr
+   index_rating_4 \tab dbl \cr
+   index_rating_5 \tab dbl \cr
+   index_rating_6 \tab dbl \cr
+   index_rating_7 \tab lgl \cr
+   second_chance_points \tab lgl \cr
+   fast_break_points \tab lgl \cr
+   points_in_the_paint \tab dbl \cr
+   first_name \tab chr \cr
+   first_name_initial \tab chr \cr
+   last_name \tab chr \cr
+   last_name_initial \tab chr \cr
+   international_first_name \tab chr \cr
+   international_first_name_initial \tab chr \cr
+   international_last_name \tab chr \cr
+   international_last_name_initial \tab chr \cr
+   scoreboard_name \tab chr \cr
+   active \tab lgl \cr
+   starter \tab lgl \cr
+   captain \tab lgl \cr
+   photo_t \tab chr \cr
+   photo_s \tab chr \cr
+}
 }
 \description{
 A function to load the Canadian Elite Basketball League (CEBL) player boxscores.
 }
 \examples{
 load_cebl_player_boxscores(2020:2021)
-
-======================================   ===========
-| Column Name                          |    Type   |
-======================================   ===========
-|game_id                               |   dbl    |
-|season                                |   dbl    |
-|team_name                             |   chr    |
-|player_number                         |   dbl    |
-|player_name                           |   chr    |
-|player_position                       |   chr    |
-|minutes                               |   chr    |
-|podbls                                |   dbl    |
-|field_goals_made                      |   dbl    |
-|field_goals_attempted                 |   dbl    |
-|field_goal_percentage                 |   dbl    |
-|two_podbl_field_goals_made            |   dbl    |
-|two_podbl_field_goals_attempted       |   dbl    |
-|two_podbl__percentage                 |   dbl    |
-|three_podbl_field_goals_made          |   dbl    |
-|three_podbl_field_goals_attempted     |   dbl    |
-|three_podbl_percentage                |   dbl    |
-|free_throws_made                      |   dbl    |
-|free_throws_attempted                 |   dbl    |
-|free_throw_percentage                 |   dbl    |
-|offensive_rebounds                    |   dbl    |
-|defensive_rebounds                    |   dbl    |
-|rebounds                              |   dbl    |
-|assists                               |   dbl    |
-|turnovers                             |   dbl    |
-|steals                                |   dbl    |
-|blocks                                |   dbl    |
-|blocks_received                       |   dbl    |
-|personal_fouls                        |   dbl    |
-|fouls_drawn                           |   dbl    |
-|plus_minus                            |   dbl    |
-|index_rating                          |   dbl    |
-|index_rating_2                        |   dbl    |
-|index_rating_3                        |   dbl    |
-|index_rating_4                        |   dbl    |
-|index_rating_5                        |   dbl    |
-|index_rating_6                        |   dbl    |
-|index_rating_7                        |   lgl    |
-|second_chance_points                  |   lgl    |
-|fast_break_points                     |   lgl    |
-|points_in_the_paint                   |   dbl    |
-|first_name                            |   chr    |
-|first_name_initial                    |   chr    |
-|last_name                             |   chr    |
-|last_name_initial                     |   chr    |
-|international_first_name              |   chr    |
-|international_first_name_initial      |   chr    |
-|international_last_name               |   chr    |
-|international_last_name_initial       |   chr    |
-|scoreboard_name                       |   chr    |
-|active                                |   lgl    |
-|starter                               |   lgl    |
-|captain                               |   lgl    |
-|photo_t                               |   chr    |
-|photo_s                               |   chr    |
-======================================  ===========
 }
