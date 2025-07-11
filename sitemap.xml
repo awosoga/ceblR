@@ -1,48 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://awosoga.github.io/ceblR/404.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/articles/ceblR-how-to-use.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/index.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/reference/ceblR-package.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/reference/pipe.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/reference/player_advanced_data.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/reference/player_boxscore_data.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/reference/team_advanced_data.html</loc>
-  </url>
-  <url>
-    <loc>https://awosoga.github.io/ceblR/reference/team_boxscore_data.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://awosoga.github.io/ceblR/404.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/LICENSE-text.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/LICENSE.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/articles/ceblR-how-to-use.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/articles/index.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/authors.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/index.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/news/index.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/reference/ceblR-package.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/reference/index.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/reference/load_cebl_coaches.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/reference/load_cebl_officials.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/reference/load_cebl_pbp.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/reference/load_cebl_player_boxscores.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/reference/load_cebl_schedule.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/reference/load_cebl_team_boxscores.html</loc></url>
+<url><loc>https://awosoga.github.io/ceblR/reference/pipe.html</loc></url>
 </urlset>
+
