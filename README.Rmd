@@ -28,6 +28,12 @@ easy-to-use format that provides greater detail and accessibility than official 
 
 ## Installation
 
+You can install the CRAN version of [**`ceblR`**](https://CRAN.R-project.org/package=ceblR) with:
+```{r readme_cran_install, eval = FALSE}
+install.packages("ceblR")
+```
+
+
 You can install the development version of [**`ceblR`**](https://github.com/awosoga/ceblR) 
 from [GitHub](https://github.com/awosoga/ceblR) with:
 

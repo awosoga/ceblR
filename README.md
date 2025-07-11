@@ -8,7 +8,7 @@
 [![R-CMD-check](https://github.com/awosoga/ceblR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/awosoga/ceblR/actions/workflows/R-CMD-check.yaml)
 [![Version-Number](https://img.shields.io/github/r-package/v/awosoga/ceblR?label=ceblR)](https://github.com/awosoga/ceblR)
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![Codecov test
 coverage](https://codecov.io/gh/awosoga/ceblR/branch/master/graph/badge.svg)](https://app.codecov.io/gh/awosoga/ceblR?branch=master)
 <!-- badges: end -->
@@ -19,6 +19,13 @@ provides functions to present data in an easy-to-use format that
 provides greater detail and accessibility than official league sources.
 
 ## Installation
+
+You can install the CRAN version of
+[**`ceblR`**](https://CRAN.R-project.org/package=ceblR) with:
+
+``` r
+install.packages("ceblR")
+```
 
 You can install the development version of
 [**`ceblR`**](https://github.com/awosoga/ceblR) from
