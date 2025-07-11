@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-This packages gathers boxscore and play-by-play data from the CEBL website and creates a repository of basic and advanced statistics for teams and players.
+Gather boxscore and play-by-play data from the CEBL website to create a repository of basic and advanced statistics for teams and players.
 }
 \seealso{
 Useful links:

@@ -14,7 +14,7 @@ coverage](https://codecov.io/gh/awosoga/ceblR/branch/master/graph/badge.svg)](ht
 <!-- badges: end -->
 
 The goal of this package is to help people access clean and tidy data
-from the [Canadian Elite Basketball League](https://cebl.ca). It
+from the [Canadian Elite Basketball League](https://www.cebl.ca/). It
 provides functions to present data in an easy-to-use format that
 provides greater detail and accessibility than official league sources.
 
@@ -38,6 +38,6 @@ for more information on how to use this library.
 ### Acknowledgement
 
 This package takes heavy inspiration from [Jason
-Zivkovic’s](https://twitter.com/jaseziv)
+Zivkovic’s](https://github.com/JaseZiv/)
 [**`euroleagueR`**](https://github.com/JaseZiv/euroleagueR/) package.
-Please give his package a star!
+Please give that package a star!

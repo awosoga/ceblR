@@ -50,5 +50,4 @@ A function to load the Canadian Elite Basketball League (CEBL) play-by-play data
 }
 \examples{
 load_cebl_pbp(2020)
-
 }

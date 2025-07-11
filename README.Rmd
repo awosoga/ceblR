@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 The goal of this package is to help people access clean and tidy data from the 
-[Canadian Elite Basketball League](https://cebl.ca). It provides functions to present data in an 
+[Canadian Elite Basketball League](https://www.cebl.ca/). It provides functions to present data in an 
 easy-to-use format that provides greater detail and accessibility than official league sources.
 
 ## Installation
@@ -42,7 +42,7 @@ Please refer to the [package vignette](https://awosoga.github.io/ceblR/articles/
 
 ### Acknowledgement
 
-This package takes heavy inspiration from [Jason Zivkovic's](https://twitter.com/jaseziv)
+This package takes heavy inspiration from [Jason Zivkovic's](https://github.com/JaseZiv/)
 [**`euroleagueR`**](https://github.com/JaseZiv/euroleagueR/) package.
-Please give his package a star!
+Please give that package a star!
 
