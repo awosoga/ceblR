@@ -413,7 +413,7 @@ load_cebl_pbp <- function(seasons = NULL) {
 
   pbp <- sapply(seasons, function(season)
     paste0("https://github.com/ryanndu/cebl-data/releases/download/pbp/cebl_pbp_", season, ".csv")) %>%
-    lapply(\(x)readr::read_csv(x, col_types = list(qualifier_3 = readr::col_character()))) %>%
+    lapply(function(x) readr::read_csv(x, col_types = list(qualifier_3 = readr::col_character()))) %>%
              dplyr::bind_rows()
 
   return(pbp)
