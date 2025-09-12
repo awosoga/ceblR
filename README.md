@@ -4,7 +4,7 @@
 # ceblR <a href="https://awosoga.github.io/ceblR/"><img src="man/figures/logo.png" align="right" height="120" alt="ceblR website" /></a>
 
 <!-- badges: start -->
-![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ceblR)
+[![Total Downloads](https://cranlogs.r-pkg.org/badges/grand-total/ceblR)
 [![R-CMD-check](https://github.com/awosoga/ceblR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/awosoga/ceblR/actions/workflows/R-CMD-check.yaml)
 [![Version-Number](https://img.shields.io/github/r-package/v/awosoga/ceblR?label=ceblR)](https://github.com/awosoga/ceblR)
 [![Lifecycle:
