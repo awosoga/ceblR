@@ -4,7 +4,9 @@ Version: 1.0.0
 Authors@R: 
     c(person("David", "Awosoga", , "odo.awosoga@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0002-2741-5770")),
-      person("Matthew", "Chow", , "mc2chow@uwaterloo.ca", role = c("aut"))
+      person("Matthew", "Chow", , "mc2chow@uwaterloo.ca", role = c("aut"),
+      comment = c(ORCID = "0009-0009-6045-6839")),
+      person("Ryan", "Du", , "ryandu343@gmail.com", role = c("aut"))  
       )
 Description: Gather boxscore and play-by-play data from the Canadian Elite Basketball League (CEBL) <https://www.cebl.ca> to create a repository of basic and advanced statistics for teams and players.
 License: MIT + file LICENSE

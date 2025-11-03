@@ -24,7 +24,8 @@ Useful links:
 
 Authors:
 \itemize{
-  \item Matthew Chow \email{mc2chow@uwaterloo.ca}
+  \item Matthew Chow \email{mc2chow@uwaterloo.ca} (\href{https://orcid.org/0009-0009-6045-6839}{ORCID})
+  \item Ryan Du \email{ryandu343@gmail.com}
 }
 
 }
